@@ -42,7 +42,7 @@ Route::get('/contatos', function () {
     //Rotas acessando Controllers (se utilizando controllers)
 Route::get('/',[HomeController::class,'index'])->name('site.home');
 
-Route::get('/cursos', [CursosController::class, 'index'])->name('site.cursos');
+Route::get('/cursos', [EstoqueController::class, 'index'])->name('site.cursos');
 
     //Rotas para ambos métodos get/post dos contatos
 Route::get('/contatos', [ContatosController::class, 'index'])->name('site.contatos');
