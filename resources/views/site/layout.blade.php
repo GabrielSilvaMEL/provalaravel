@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.home') }}">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item {{ (Route::current()->getName() === 'site.cursos' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.cursos') }}">Cursos</a></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.cursos' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.cursos') }}">Estoque</a></li>
         <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.contatos') }}">Contatos</a></li>
       </ul>
     </div>

@@ -26,13 +26,8 @@
           <input type="email" class="form-control" id="emailContato" name="emailContato" placeholder="fulano@email.com">
         </div>
         <div class="form-group">
-          <label for="tipoContato">Tipo de contato:</label>
-          <select class="form-control" id="tipoContato" name="tipoContato">
-            <option value="Sugestão">Sugestão</option>
-            <option value="Crítica">Crítica</option>
-            <option value="Elogio">Elogio</option>
-            <option value="Dúvida">Dúvida</option>
-          </select>
+          <label for="emailContato">Numero de telefone:</label>
+          <input type="number" class="form-control" id="numeroContato" name="telefoneContato" placeholder="99999-9999">
         </div>
         <div class="form-group">
           <label for="mensagemContato">Mensagem:</label>
