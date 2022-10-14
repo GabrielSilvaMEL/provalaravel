@@ -8,7 +8,6 @@ class ContatosController extends Controller
 {
     public function index() {
         $contato = Contato::all();
-
         return view('site.contatos', ['contato' => $contato]);
     }
 
@@ -17,18 +16,17 @@ class ContatosController extends Controller
 
         $contato->nome = $request->nomeContato;;
         $contato->email = $request->emailContato;
-        $contato->tipo = $request->tipoContato;
+        $contato->telefone = $request->telefoneContato;
         $contato->mensagem = $request->mensagemContato;
-        $contato->status = false;
 
         try {
             $contato->save();
             
             return redirect()->action([ContatosController::class, 'index'])
-                                    ->with('msg','Mensagem enviada com sucesso!');
+                                    ->with('msg','Enviado com sucesso!');
         } catch (\Exception $e) {
             return redirect()->action([ContatosController::class, 'index'])
-                                    ->with('msg','Falha no envio da mensagem!');
+                                    ->with('msg','Falha no envio!');
         }
     }
 }

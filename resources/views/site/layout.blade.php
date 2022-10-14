@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaravelProj02</title>
+    <title>Venda de Veículos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
 </head>
@@ -12,15 +12,17 @@
 
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">LaravelProj02</a>
+    <a class="navbar-brand" href="#">ReVeículos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.home') }}">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item {{ (Route::current()->getName() === 'site.cursos' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.cursos') }}">Estoque</a></li>
-        <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.contatos') }}">Contatos</a></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'contatosmanager.index' ? ' active' : '') }}"><a class="nav-link" href="{{ route('contatosmanager.index') }}">Contatos</a></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'veiculosmanager.index' ? ' active' : '') }}"><a class="nav-link" href="{{ route('veiculosmanager.index') }}">Estoque de Veículos</a></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.contatos') }}">Cadastrar Contatos</a></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.veiculos' ? ' active' : '') }}"><a class="nav-link" href="{{ route('site.veiculos') }}">Cadastrar Veículos</a></li>
       </ul>
     </div>
   </nav>

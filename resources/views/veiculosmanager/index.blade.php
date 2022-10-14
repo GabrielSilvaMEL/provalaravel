@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">Projeto Laravel - Cadastro de Cursos</h1>
+    <h1 class="display-4">Projeto Laravel - Cadastro de veiculos</h1>
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success" href="{{ route('cursosmanager.create') }}">Criar Novo Curso</a>
+    <a class="btn btn-success" href="{{ route('site.veiculos') }}">Criar Novo veiculo</a>
     <p></p>
     @if ($message = Session::get('success'))
         <p></p>
@@ -19,22 +19,24 @@
         <tr>
             <th>#</th>
             <th>Nome</th>
-            <th>Descrição</th>
-            <th>Imagem</th>
+            <th>Marca</th>
+            <th>Cor</th>
+            <th>Ano</th>
+            <th>Kilometragem</th>
             <th width="280px">Ação</th>
         </tr>
-        @foreach ($cursos as $curso)
+        @foreach ($veiculos as $veiculo)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $curso->nome }}</td>
-            <td>{{ $curso->descricao }}</td>
-            <td>{{ $curso->imagem }}</td>
+            <td>{{ $veiculo->nome }}</td>
+            <td>{{ $veiculo->marca }}</td>
+            <td>{{ $veiculo->cor }}</td>
+            <td>{{ $veiculo->ano }}</td>
+            <td>{{ $veiculo->km }}</td>
             <td>
-                <form action="{{ route('cursosmanager.destroy', $curso->id) }}" method="POST">
+                <form action="{{ route('veiculosmanager.destroy', $veiculo->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('cursosmanager.show', $curso->id) }}">Exibir</a>
-
-                    <a class="btn btn-primary" href="{{ route('cursosmanager.edit', $curso->id) }}">Editar</a>
+                    <a class="btn btn-info" href="{{ route('veiculosmanager.show', $veiculo->id) }}">Exibir</a>
 
                     @csrf
                     @method('DELETE')
@@ -46,7 +48,7 @@
         @endforeach
     </table>
 
-    {!! $cursos->links() !!}
+    {!! $veiculos->links() !!}
 </div>
 
 @endsection

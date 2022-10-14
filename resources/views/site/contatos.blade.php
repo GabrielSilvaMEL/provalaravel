@@ -26,7 +26,7 @@
           <input type="email" class="form-control" id="emailContato" name="emailContato" placeholder="fulano@email.com">
         </div>
         <div class="form-group">
-          <label for="emailContato">Numero de telefone:</label>
+          <label for="telefoneContato">Numero de telefone:</label>
           <input type="number" class="form-control" id="numeroContato" name="telefoneContato" placeholder="99999-9999">
         </div>
         <div class="form-group">
