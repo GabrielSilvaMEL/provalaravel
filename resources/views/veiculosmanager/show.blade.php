@@ -39,6 +39,12 @@
                 {{ $veiculo->km }}
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Imagem:</strong>
+                {{ $veiculo->imagem }}
+            </div>
+        </div>
     </div>
 </div>
 @endsection

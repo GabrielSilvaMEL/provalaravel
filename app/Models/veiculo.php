@@ -13,6 +13,7 @@ class Veiculo extends Model
         'marca',
         'cor',
         'ano',
-        'km'
+        'km',
+        'imagem',
     ];
 }

@@ -19,7 +19,16 @@ class VeiculosManagerController extends Controller
         $veiculo->cor = $request->corveiculo;
         $veiculo->ano = $request->anoveiculo;
         $veiculo->km = $request->kmveiculo;
-
+        $veiculo->imagem='';
+        $dirImagem = "images/veiculo";
+        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()){
+            $requestImage = $request->imagem;
+            $extension = $requestImage->extension();
+ 
+            $imageName = md5 ( $requestImage -> getClientOriginalName() . strtotime ('now')) . '.' . $extension;
+            $requestImage->move(public_path($dirImagem),$imageName);
+            $veiculo->imagem=$dirImagem.'/'.$imageName;
+        };
         try {
             $veiculo->save();
         
@@ -35,5 +44,11 @@ class VeiculosManagerController extends Controller
     {
         $veiculo = Veiculo::findOrFail($id);
         return view('veiculosmanager.show',compact('veiculo'));
+    }
+    public function destroy($id)
+    {
+        Veiculo::findOrFail($id)->delete();
+
+        return redirect()->route('veiculosmanager.index')->with('success','Veículo excluido com sucesso!');
     }
 }

@@ -23,6 +23,7 @@
             <th>Cor</th>
             <th>Ano</th>
             <th>Kilometragem</th>
+            <th>Imagem</th>
             <th width="280px">Ação</th>
         </tr>
         @foreach ($veiculos as $veiculo)
@@ -33,6 +34,7 @@
             <td>{{ $veiculo->cor }}</td>
             <td>{{ $veiculo->ano }}</td>
             <td>{{ $veiculo->km }}</td>
+            <td>{{ $veiculo->imagem }}</td>
             <td>
                 <form action="{{ route('veiculosmanager.destroy', $veiculo->id) }}" method="POST">
 

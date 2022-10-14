@@ -37,6 +37,12 @@
           <label for="kmVeiculo">Km:</label>
           <input type="text" class="form-control" id="kmVeiculo" name="kmVeiculo" placeholder="10000">
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Imagem:</strong>
+                    <input type="file" name="imagem" class="form-control" placeholder="Imagem">
+                </div>
+            </div>
         <button type="submit" class="btn btn-primary mb-2" value="Enviar">Enviar</button>
     </form>
 </div>
