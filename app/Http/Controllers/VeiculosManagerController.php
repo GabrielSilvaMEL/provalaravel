@@ -21,6 +21,7 @@ class VeiculosManagerController extends Controller
         $veiculo->km = $request->kmveiculo;
         $veiculo->imagem='';
         $dirImagem = "images/veiculo";
+        
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()){
             $requestImage = $request->imagem;
             $extension = $requestImage->extension();
